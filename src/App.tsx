@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Map, TileLayer, withLeaflet } from 'react-leaflet';
-import { ReactLeafletSearch } from 'react-leaflet-search'
-import { ReactLeafletZoomIndicator } from 'react-leaflet-zoom-indicator-ts'
+import { ReactLeafletSearch as RLSearch } from 'react-leaflet-search'
+import { ReactLeafletZoomIndicator as RLZoomIndicator } from 'react-leaflet-zoom-indicator-ts'
 import './App.css';
 import './leaflet-v1.3.3.css';
 
@@ -17,8 +17,8 @@ interface IProps {
   position?: string;
 }
 
-const WrappedZoomIndicator = withLeaflet(ReactLeafletZoomIndicator);
-const WrappedSearch = withLeaflet(ReactLeafletSearch);
+const WrappedZoomIndicator = withLeaflet(RLZoomIndicator);
+const WrappedSearch = withLeaflet(RLSearch);
 
 class App extends React.Component<IProps, IState> {
   public props: IProps;
