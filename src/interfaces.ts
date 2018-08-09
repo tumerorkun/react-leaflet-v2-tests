@@ -4,6 +4,9 @@ interface IState {
   count: number;
   maxBounds: Array<[number, number]>;
   maxZoom: number;
+  baseLayerMaps: { [key: string]: string };
+  baseLayers: Array<{ name: string; title: string;}>
+  checkedBaseLayer: string;
 }
 
 interface IProps {

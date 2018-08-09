@@ -18,17 +18,35 @@ const WrappedGroupedLayer = withLeaflet(ReactLeafletGroupedLayerControl);
 
 class App extends React.Component<IProps, IState> {
   public props: IProps;
-  public state: IState = {
-    bounds: [
-      [33.100745405144245, 24.510498046875],
-      [33.100745405144245, 46.48315429687501],
-      [44.55916341529184, 46.48315429687501],
-      [44.55916341529184, 24.510498046875],
-    ],
-    count: 0,
-    maxBounds: [ [-90, -180], [90, 180] ],
-    maxZoom: 13,
-  };
+  public state: IState;
+  constructor(props:IProps) {
+    super(props);
+    // bind this to methods
+    this.baseLayerChanged = this.baseLayerChanged.bind(this);
+
+    // init state
+    this.state = {
+      baseLayerMaps: {
+        'esrimap': 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+        'openstreetmap': 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      },
+      baseLayers: [{ name: 'esrimap', title: 'Esri Map' }, {name:'openstreetmap', title: 'Open Street Map'}],
+      bounds: [
+        [33.100745405144245, 24.510498046875],
+        [33.100745405144245, 46.48315429687501],
+        [44.55916341529184, 46.48315429687501],
+        [44.55916341529184, 24.510498046875],
+      ],
+      checkedBaseLayer: 'openstreetmap',
+      count: 0,
+      maxBounds: [ [-90, -180], [90, 180] ],
+      maxZoom: 13,
+    };
+  }
+
+  public baseLayerChanged(nextBaseLayerTitle:string): void {
+    this.setState({ checkedBaseLayer: nextBaseLayerTitle });
+  }
 
   public render() {
     return (
@@ -39,7 +57,7 @@ class App extends React.Component<IProps, IState> {
         maxZoom={this.state.maxZoom}
         maxBounds={this.state.maxBounds} >
 
-        <TileLayer noWrap={true} url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+        <TileLayer noWrap={true} url={this.state.baseLayerMaps[this.state.checkedBaseLayer]} />
 
         <WrappedZoomIndicator head={'Zoom'} position={'topleft'} />
 
@@ -49,10 +67,9 @@ class App extends React.Component<IProps, IState> {
 
         <WrappedGroupedLayer
           position={'topleft'}
-          baseLayers={[
-            { name: 'test', title: 'BASE-1' },
-          ]}
-          checkedBaseLayer={'test'} />
+          baseLayers={this.state.baseLayers}
+          checkedBaseLayer={this.state.checkedBaseLayer}
+          onBaseLayerChange={this.baseLayerChanged}/>
 
       </Map>
     );
