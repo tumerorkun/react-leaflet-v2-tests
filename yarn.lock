@@ -5673,13 +5673,21 @@ react-error-overlay@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-4.0.0.tgz#d198408a85b4070937a98667f500c832f86bd5d4"
 
-react-leaflet-search@0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/react-leaflet-search/-/react-leaflet-search-0.3.1.tgz#a177f06192f520a05b41e61a35927b5d1dad9ae4"
+react-leaflet-gridcanvas@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/react-leaflet-gridcanvas/-/react-leaflet-gridcanvas-0.0.2.tgz#68e65fb689cd6792a4a01b1c215b48940763ea3a"
 
-react-leaflet-zoom-indicator-ts@^0.1.1:
+react-leaflet-grouped-layer-control@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/react-leaflet-grouped-layer-control/-/react-leaflet-grouped-layer-control-0.0.9.tgz#c9c8ee5e2f28acf66601e5bbcb1e0b5d24f72ec4"
+
+react-leaflet-search@^0.3.4:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/react-leaflet-search/-/react-leaflet-search-0.3.4.tgz#975dc3dfc07096a1e4426ebafd8534ed0d2cb233"
+
+react-leaflet-zoom-indicator@^0.1.1:
   version "0.1.1"
-  resolved "https://registry.yarnpkg.com/react-leaflet-zoom-indicator-ts/-/react-leaflet-zoom-indicator-ts-0.1.1.tgz#5e3c192b350afdd7025dce7d939b76ff1f703ccb"
+  resolved "https://registry.yarnpkg.com/react-leaflet-zoom-indicator/-/react-leaflet-zoom-indicator-0.1.1.tgz#9b07262694feb2d5e3706aa9315917b9985ce71c"
 
 react-leaflet@^2.0.0:
   version "2.0.0"

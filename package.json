@@ -9,8 +9,10 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-leaflet": "^2.0.0",
-    "react-leaflet-search": "0.3.1",
-    "react-leaflet-zoom-indicator-ts": "^0.1.1",
+    "react-leaflet-gridcanvas": "^0.0.2",
+    "react-leaflet-grouped-layer-control": "^0.0.9",
+    "react-leaflet-search": "^0.3.4",
+    "react-leaflet-zoom-indicator": "^0.1.1",
     "react-scripts-ts": "2.17.0"
   },
   "scripts": {
