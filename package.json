@@ -2,6 +2,7 @@
   "name": "react-leaflet-v2-tests",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://tumerorkun.github.io/react-leaflet-v2-tests/",
   "dependencies": {
     "@types/leaflet": "^1.2.9",
     "@types/react-leaflet": "^1.1.6",
