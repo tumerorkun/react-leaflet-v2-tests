@@ -4,9 +4,11 @@ interface IState {
   count: number;
   maxBounds: Array<[number, number]>;
   maxZoom: number;
-  baseLayerMaps: { [key: string]: string };
   baseLayers: Array<{ name: string; title: string;}>
   checkedBaseLayer: string;
+  centerTextFunc: () => string;
+  gridColor: string;
+  gridShow: boolean;
 }
 
 interface IProps {
