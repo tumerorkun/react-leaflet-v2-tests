@@ -30,7 +30,7 @@ class App extends React.Component<IProps, IState> {
 
     this.baseLayerMaps = {
         'esrimap': 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-        'googlemap':'http://www.google.cn/maps/vt?lyrs=s@189&gl=tr&x={x}&y={y}&z={z}',
+        'googlemap':'https://www.google.cn/maps/vt?lyrs=s@189&gl=tr&x={x}&y={y}&z={z}',
         'openstreetmap': 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       },
 
