@@ -9,8 +9,8 @@
     "react-dom": "^16.4.2",
     "react-leaflet": "^2.0.0",
     "react-leaflet-gridcanvas": "^0.0.3",
-    "react-leaflet-grouped-layer-control": "^0.0.10",
-    "react-leaflet-search": "^0.3.4",
+    "react-leaflet-grouped-layer-control": "^0.0.12",
+    "react-leaflet-search": "^0.3.5",
     "react-leaflet-zoom-indicator": "^0.1.1",
     "react-scripts-ts": "2.17.0"
   },
