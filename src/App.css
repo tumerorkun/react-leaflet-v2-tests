@@ -1,9 +1,0 @@
-@import url('./leaflet-v1.3.3.css');
-.simpleMap {
-  width: 100vw;
-  height: 100vh
-}
-
-.leaflet-search-wrap {
-  z-index: 801!important;
-}

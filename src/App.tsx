@@ -5,8 +5,7 @@ import { GridCanvas } from 'react-leaflet-gridcanvas'
 import { overlay, ReactLeafletGroupedLayerControl } from 'react-leaflet-grouped-layer-control'
 import { ReactLeafletSearch as RLSearch } from 'react-leaflet-search'
 import { ReactLeafletZoomIndicator as RLZoomIndicator } from 'react-leaflet-zoom-indicator'
-// css
-import './App.css';
+
 // interfaces
 import { IProps, IState } from './interfaces'
 
