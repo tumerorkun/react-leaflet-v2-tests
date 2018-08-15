@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Map, TileLayer, withLeaflet } from 'react-leaflet';
 // my Components
 import { GridCanvas } from 'react-leaflet-gridcanvas'
-import { ReactLeafletGroupedLayerControl } from 'react-leaflet-grouped-layer-control'
+import { overlay, ReactLeafletGroupedLayerControl } from 'react-leaflet-grouped-layer-control'
 import { ReactLeafletSearch as RLSearch } from 'react-leaflet-search'
 import { ReactLeafletZoomIndicator as RLZoomIndicator } from 'react-leaflet-zoom-indicator'
 // css
@@ -54,6 +54,14 @@ class App extends React.Component<IProps, IState> {
       gridShow: true,
       maxBounds: [ [-90, -180], [90, 180] ],
       maxZoom: 13,
+      overlays: [
+        {
+          checked: true,
+          groupTitle: 'Grids',
+          name: 'grid-1',
+          title: ' Grid'
+        }
+      ]
     };
   }
 
@@ -82,15 +90,8 @@ class App extends React.Component<IProps, IState> {
           baseLayers={this.state.baseLayers}
           checkedBaseLayer={this.state.checkedBaseLayer}
           onBaseLayerChange={this.baseLayerChanged}
-          // exclusiveGroups={[]}
-          overlays={[
-            {
-              checked: this.state.gridShow,
-              groupTitle: 'Grids',
-              name: 'grid-1',
-              title: ' Grid'
-            }
-          ]}
+          exclusiveGroups={[]}
+          overlays={this.state.overlays}
           onOverlayChange={this.overlayChanged}
         />
 
@@ -99,13 +100,13 @@ class App extends React.Component<IProps, IState> {
   }
 
   private getNextColor(nextBaseLayerTitle: string) {
-    return (nextBaseLayerTitle === 'openstreetmap') ? 'black' :
-      (nextBaseLayerTitle === 'esrimap') ? 'white' :
-        (nextBaseLayerTitle === 'googlemap') ? 'yellow' : 'red';
+    return  (nextBaseLayerTitle === 'openstreetmap') ? 'black' :
+            (nextBaseLayerTitle === 'esrimap') ? 'white' :
+            (nextBaseLayerTitle === 'googlemap') ? 'yellow' : 'red';
   }
 
   private centerText(): string {
-    return `zoom: #zhebee`
+    return `zoom: #z`
   }
 
   private baseLayerChanged(nextBaseLayerTitle: string): void {
@@ -118,9 +119,10 @@ class App extends React.Component<IProps, IState> {
     }
   }
 
-  private overlayChanged(newOverlays: any) {
+  private overlayChanged(newOverlays: overlay[]) {
+    const grid = newOverlays.find((e: overlay) => e.name === 'grid-1');
     this.setState({
-      gridShow: newOverlays[0].checked
+      gridShow: typeof grid !== 'undefined' ? grid.checked : false
     });
   }
 

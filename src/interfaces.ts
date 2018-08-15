@@ -1,3 +1,4 @@
+import { overlay } from "react-leaflet-grouped-layer-control";
 
 interface IState {
   bounds: Array<[number, number]>;
@@ -9,6 +10,7 @@ interface IState {
   centerTextFunc: () => string;
   gridColor: string;
   gridShow: boolean;
+  overlays: overlay[]
 }
 
 interface IProps {
