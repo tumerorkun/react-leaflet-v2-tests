@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Map, TileLayer, withLeaflet } from 'react-leaflet';
+import { Map, Popup, TileLayer, withLeaflet } from 'react-leaflet';
 // my Components
 import { GridCanvas } from 'react-leaflet-gridcanvas'
 import { overlay, ReactLeafletGroupedLayerControl } from 'react-leaflet-grouped-layer-control'
@@ -64,6 +64,17 @@ class App extends React.Component<IProps, IState> {
     };
   }
 
+  public customPopup(info: string): JSX.Element {
+    return (
+      <Popup>
+        <div>
+          <p> Custom PopUp </p>
+          {info}
+        </div>
+      </Popup>
+    )
+  }
+
   public render() {
     return (
       <Map
@@ -77,11 +88,18 @@ class App extends React.Component<IProps, IState> {
 
         <WrappedZoomIndicator head={'Zoom'} position={'topleft'} />
 
-        <WrappedSearch position='topleft' zoom={10} search={[56,45.656]}/>
+        <WrappedSearch
+          position='topleft'
+          zoom={10}
+          search={[56, 45.656]}
+          showMarker={true}
+          showPopup={true}
+          inputPlaceholder={'Search Latitude, Longitude'}
+          // popUp={this.customPopup}
+        />
         {
           !this.state.gridShow ||
           <WrappedGridCanvas color={this.state.gridColor} centerText={ this.state.centerTextFunc } />
-
         }
 
         <WrappedGroupedLayer
