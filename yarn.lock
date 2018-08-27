@@ -5731,9 +5731,9 @@ react-leaflet-grouped-layer-control@^0.0.12:
   version "0.0.12"
   resolved "https://registry.yarnpkg.com/react-leaflet-grouped-layer-control/-/react-leaflet-grouped-layer-control-0.0.12.tgz#b861760739f17613dd7582d89630a1d490468150"
 
-react-leaflet-search@^0.4.2:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/react-leaflet-search/-/react-leaflet-search-0.4.2.tgz#195e5b74e09632ad898809407f00a5fca936afe7"
+react-leaflet-search@^0.4.3:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/react-leaflet-search/-/react-leaflet-search-0.4.3.tgz#1f6e7c422d453e501dce4b21d98e3aa106787033"
 
 react-leaflet-zoom-indicator@^0.1.1:
   version "0.1.1"

@@ -10,14 +10,15 @@
     "react-leaflet": "^2.0.0",
     "react-leaflet-gridcanvas": "^0.0.3",
     "react-leaflet-grouped-layer-control": "^0.0.12",
-    "react-leaflet-search": "^0.4.2",
+    "react-leaflet-search": "^0.4.3",
     "react-leaflet-zoom-indicator": "^0.1.1",
     "react-scripts-ts": "2.17.0"
   },
   "scripts": {
     "start": "react-scripts-ts start",
+    "updatemypack": "yarn add react-leaflet-search@latest react-leaflet-gridcanvas@latest react-leaflet-grouped-layer-control@latest react-leaflet-zoom-indicator@latest",
     "build": "react-scripts-ts build",
-    "predeploy": "npm run build",
+    "predeploy": "yarn updatemypack && yarn build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject"
