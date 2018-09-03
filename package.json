@@ -10,7 +10,7 @@
     "react-leaflet": "^2.0.0",
     "react-leaflet-gridcanvas": "^0.0.3",
     "react-leaflet-grouped-layer-control": "^0.0.12",
-    "react-leaflet-search": "^0.4.3",
+    "react-leaflet-search": "^0.5.1",
     "react-leaflet-zoom-indicator": "^0.1.1",
     "react-scripts-ts": "2.17.0"
   },
@@ -30,6 +30,7 @@
     "@types/react": "^16.4.8",
     "@types/react-dom": "^16.0.7",
     "@types/react-leaflet": "^1.1.6",
+    "babel-polyfill": "^6.26.0",
     "gh-pages": "^1.2.0",
     "typescript": "^3.0.1"
   }

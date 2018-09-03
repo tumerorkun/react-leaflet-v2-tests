@@ -95,6 +95,7 @@ class App extends React.Component<IProps, IState> {
           showMarker={true}
           showPopup={true}
           inputPlaceholder={'Search Latitude, Longitude'}
+          closeResultsOnClick={true}
           // popUp={this.customPopup}
         />
         {
