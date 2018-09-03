@@ -5731,9 +5731,9 @@ react-error-overlay@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-4.0.0.tgz#d198408a85b4070937a98667f500c832f86bd5d4"
 
-react-leaflet-gridcanvas@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/react-leaflet-gridcanvas/-/react-leaflet-gridcanvas-0.0.3.tgz#ed45dbe7adf7ff5273d011734430ec9d45c897fc"
+react-leaflet-gridcanvas@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/react-leaflet-gridcanvas/-/react-leaflet-gridcanvas-0.1.0.tgz#7cf4f776751486ded53687299c52c78890f4b8c9"
 
 react-leaflet-grouped-layer-control@^0.0.12:
   version "0.0.12"
